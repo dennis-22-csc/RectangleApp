@@ -41,10 +41,10 @@ public class MainActivity extends AppCompatActivity {
         Rectangle rectangle=new Rectangle(length, breadth);
 
         //Construct rectangle calculator object
-        RectangleCalculator rectangleCalculator=new RectangleCalculator();
+        RectangleCalculator rectangleCalculator=new RectangleCalculator(rectangle);
 
         //Calculate area using calculateArea method of the rectangle calculator object, store area in variable of type double
-        double area=rectangleCalculator.calculateArea(rectangle);
+        double area=rectangleCalculator.calculateArea().getArea();
 
         //Convert area of type double to area of type String
         String text=String.valueOf(area);

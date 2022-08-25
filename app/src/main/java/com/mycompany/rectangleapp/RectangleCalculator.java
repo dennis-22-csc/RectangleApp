@@ -1,18 +1,21 @@
 package com.mycompany.rectangleapp;
 
 public class RectangleCalculator {
-    //Field
-    private Rectangle rectangle;
+    private final Rectangle rectangle;
+    private double area;
 
-    //constructor
-    public RectangleCalculator() {
-
+    public RectangleCalculator(Rectangle rectangle){
+        this.rectangle=rectangle;
     }
 
-    //Method encapsulating capability to calculate area
-    public  double calculateArea(Rectangle rectangle) {
-        double length=rectangle.getLength();
-        double breadth=rectangle.getBreadth();
-        return length * breadth;
+
+    public RectangleCalculator calculateArea(){
+        area=rectangle.getLength()* rectangle.getBreadth();
+        return this;
     }
+    public double getArea(){
+        return area;
+    }
+
+
 }
